@@ -21,16 +21,14 @@ const useWeatherApi = (cityName) => {
                 
                 let response = await fetch(url)
                 let data = await response.json()
-                console.log(data);
-
                 //setting data from api into variable
-                const mainTemp = Math.floor(Math.round(data.main.temp) / 10)
-                const minTemp = Math.floor(Math.round(data.main.temp_min) / 10)
-                const maxTemp = Math.ceil(Math.round(data.main.temp_max) / 10)
+                const mainTemp = Math.floor(Math.round((data.main.temp - 273.15)))
+                const minTemp = Math.round(data.main.temp_min - 273.15)
+                const maxTemp = Math.round(data.main.temp_max - 273.15)
                 const currentHumidity = data.main.humidity
                 const currentPressure = data.main.pressure
                 const getIcon = data.weather[0].icon
-                const getFeelsLike = Math.round(data.main.feels_like) /10 
+                const getFeelsLike = Math.round(data.main.feels_like - 273.15)
                 setCurrentTemp(`${mainTemp}°C`);
                 setHumidity(`${currentHumidity}%`);
                 setCity(data.name);
@@ -53,7 +51,7 @@ const useWeatherApi = (cityName) => {
                 setPressure(``);
                 SetFeelsLike(``)
                 setIconID()
-                console.log('Error:', error)}
+                }
         }
         if (cityName) {
             getWeatherData();
