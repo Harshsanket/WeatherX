@@ -9,6 +9,7 @@ This project serves as a learning exercise to gain proficiency in building React
 - Understanding and implementing React hooks such as `useState` and `useEffect`.
 - Utilizing custom hooks for fetching data from external APIs.
 - Learning to manage application state with `useState` and `useEffect`.
+- ShadcnUI: ShadcnUI is used as the UI library for components, providing pre-styled components for rapid UI development.
 - Deployment using Vercel.
 
 ## Features
