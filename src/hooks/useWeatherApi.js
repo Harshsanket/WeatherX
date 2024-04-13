@@ -19,7 +19,7 @@ const useWeatherApi = (cityName) => {
     const getWeatherData = async () => {
       try {
         // getting latitude and longitude
-        const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIKEY}`;
+        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIKEY}`;
         const geoResponse = await fetch(geoUrl);
         const geoData = await geoResponse.json();
         const latitude = geoData[0].lat;
