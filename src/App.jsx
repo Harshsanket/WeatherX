@@ -38,7 +38,7 @@ const App = () => {
   return (
     <>
       <div className="flex flex-col justify-end w-full h-40 sm:h-48 text-center">
-        <p className="sm:text-6xl text-4xl font-bold">Weather App</p>
+        <p className="sm:text-6xl text-4xl font-bold">Weather X</p>
       </div>
 
       <div className="mt-4 justify-center w-full text-center flex">
