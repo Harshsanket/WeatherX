@@ -37,11 +37,15 @@ const App = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-end w-full h-40 sm:h-48 text-center">
-        <p className="sm:text-6xl text-4xl font-bold">Weather X</p>
+      <div
+        id="Header"
+        className="w-full text-white sm:h-72 h-56 pt-2 pl-2 text-center flex flex-col justify-end pb-12"
+      >
+        <a href="#" className="sm:text-8xl text-5xl font-bold">
+          WeatherX
+        </a>
       </div>
-
-      <div className="mt-4 justify-center w-full text-center flex">
+      <div className="justify-center w-full text-center flex">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -54,13 +58,13 @@ const App = () => {
                 placeholder="Search by city name ..."
                 value={cityName}
                 onChange={(e) => setCityName(e.target.value)}
-                className="text-black"
+                className="border border-black rounded p-2 text-black h-10 sm:w-80 sm:h-12"
               />
               <Button
                 type="submit"
                 onClick={bar}
                 variant
-                className="bg-green-500"
+                className="bg-green-500 h-10 sm:h-12 sm:w-auto p-2 text-lg"
               >
                 Submit
               </Button>
