@@ -1,6 +1,6 @@
-# Weather App
+# WeatherX
 
-This Weather App is a simple web application that allows users to check the weather conditions for various cities. It provides real-time weather information fetched from the OpenWeather API.
+The WeatherX is an Weather App it is a simple web application that allows users to check the weather conditions for various cities. It provides real-time weather information fetched from the OpenWeather API.
 
 ## Learning Objectives
 
